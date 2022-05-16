@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
+
+/* CUSTOM */
+h1 {
+  background-image: url('../../images/top-title-base.svg');
+}
+
+header {
+  background-image: linear-gradient(257.62deg, #5FC2AB 0%, #B3D968 100.27%);
+}
+
+header::after {
+  content: '';
+  height: 273px;
+  background-image: url('../../images/separator-header.png');
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.btn-white {
+  @apply rounded-[36px] bg-white px-[35px] py-[20px] text-orange-900 shadow-md text-2xl;
+}
+
 @tailwind utilities;
+
+.baby-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+.circle1-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 500ms;
+  transform-origin: 50% 50%;
+}
+.circle2-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1500ms;
+  transform-origin: 50% 50%;
+}
+
+@keyframes babyAnim {
+  0% {
+    transform: translate(0)
+  }
+
+  50% {
+    transform: translateY(-50px)
+  }
+
+  to {
+    transform: translate(0)
+  }
+}
