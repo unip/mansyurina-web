@@ -27,6 +27,11 @@ header::after {
   @apply rounded-[36px] bg-white px-[35px] py-[20px] text-orange-900 shadow-md text-2xl;
 }
 
+.btn-green-blue {
+  background: linear-gradient(257.62deg, #5FC2AB 0%, #B3D968 100.27%);
+  @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
+}
+
 @tailwind utilities;
 
 .baby-animation {
