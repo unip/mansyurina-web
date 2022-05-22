@@ -1,5 +1,4 @@
 @tailwind base;
-@tailwind components;
 
 /* CUSTOM */
 h1 {
@@ -23,8 +22,44 @@ header::after {
   right: 0;
 }
 
+section.kelas-massage::before {
+  content: '';
+  height: 73px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../images/separator-kelas-top.png');
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+section.kelas-massage::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../images/separator-kelas-bottom.png');
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+section.testimonial {
+  background-image: linear-gradient(256.38deg, #5FC2AB -0.91%, #B3D968 97.53%);
+}
+
+@tailwind components;
+
+/* CUSTOM */
 .btn-white {
-  @apply rounded-[36px] bg-white px-[35px] py-[20px] text-orange-900 shadow-md text-2xl;
+  @apply rounded-[36px] bg-white px-[35px] py-[20px] text-dark-red shadow-md text-2xl;
+}
+.btn-peach {
+  @apply rounded-[36px] bg-peach px-[35px] py-[20px] text-dark-red shadow-md text-2xl;
 }
 
 .btn-green-blue {
@@ -33,6 +68,10 @@ header::after {
 }
 
 @tailwind utilities;
+
+.btn-hover {
+  @apply hover:-translate-y-2 hover:shadow-lg transition-all duration-300;
+}
 
 .baby-animation {
   animation: babyAnim 4s ease-in-out;
