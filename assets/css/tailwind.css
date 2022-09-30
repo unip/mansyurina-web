@@ -79,6 +79,25 @@ footer {
   @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
 }
 
+.btn-animate {
+  background: linear-gradient(-45deg, #b3d968, #f6c346, #b3d968);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .slider .slide .title {
   background-image: url('../../images/bg-article-thumb-title.png');
   background-size: 100% 100%;

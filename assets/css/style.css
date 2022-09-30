@@ -628,6 +628,53 @@ footer {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.btn-animate {
+  background: linear-gradient(-45deg, #b3d968, #f6c346, #b3d968);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  border-radius: 36px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .slider .slide .title {
   background-image: url('../../images/bg-article-thumb-title.png');
   background-size: 100% 100%;
@@ -769,24 +816,12 @@ footer {
   bottom: -1px;
 }
 
-.bottom-7 {
-  bottom: 1.75rem;
-}
-
-.right-14 {
-  right: 3.5rem;
-}
-
-.bottom-3 {
-  bottom: 0.75rem;
+.bottom-4 {
+  bottom: 1rem;
 }
 
 .right-7 {
   right: 1.75rem;
-}
-
-.bottom-4 {
-  bottom: 1rem;
 }
 
 .z-\[99\] {
@@ -855,12 +890,12 @@ footer {
   margin-bottom: -1.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mt-auto {
   margin-top: auto;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .block {
@@ -909,10 +944,6 @@ footer {
   height: 168px;
 }
 
-.h-\[182\] {
-  height: 182;
-}
-
 .h-\[182px\] {
   height: 182px;
 }
@@ -959,8 +990,8 @@ footer {
   max-width: 676px;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .shrink {
@@ -969,6 +1000,11 @@ footer {
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[200px\] {
+  --tw-translate-y: 200px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1017,8 +1053,24 @@ footer {
   gap: 1.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-y-\[67px\] {
   row-gap: 67px;
+}
+
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-visible {
@@ -1090,6 +1142,11 @@ footer {
   padding-bottom: 1rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pt-\[130px\] {
   padding-top: 130px;
 }
@@ -1159,11 +1216,6 @@ footer {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-xs {
@@ -1350,14 +1402,6 @@ nav.opaque::before {
 
   .md\:-left-\[100px\] {
     left: -100px;
-  }
-
-  .md\:bottom-14 {
-    bottom: 3.5rem;
-  }
-
-  .md\:right-28 {
-    right: 7rem;
   }
 
   .md\:bottom-7 {

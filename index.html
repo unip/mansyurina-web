@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
-  <title>Mansyurina</title>
+  <title>Mansyurina - Mom and Baby Care 👩🏻‍🍼</title>
 </head>
 
 <body>
@@ -316,18 +316,43 @@
     </div>
   </section>
 
-  <footer class="min-h-screen flex flex-col relative">
+  <footer class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
     <img src="./images/footer-border-top.png" alt="" class="block absolute w-full h-[182px] top-0 left-0 right-0" />
 
-    <div class="footer-content">
+    <div class="footer-content flex flex-col text-white text-center max-w-2xl px-6 md:px-0 z-10 gap-y-10">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptates nemo adipisci assumenda magni amet
+        totam dolorum nisi nam vero, id consequuntur, aspernatur neque cupiditate deleniti cum alias quas recusandae?
+      </p>
 
+      <div class="buttons flex justify-center gap-2">
+        <a href="" class="block px-3 py-1 rounded-full hover:bg-black/10">Layanan</a>
+        <a href="" class="block px-3 py-1 rounded-full hover:bg-black/10">Tentang kami</a>
+        <a href="" class="block px-3 py-1 rounded-full hover:bg-black/10">Blog</a>
+        <a href="" class="block px-3 py-1 rounded-full hover:bg-black/10">Kontak</a>
+      </div>
+
+      <div class="buttons flex justify-center gap-5">
+        <a href="https://www.instagram.com/mansyurina.homecare/" target="_blank" class="btn-white btn-hover">
+          <i class="fa-brands fa-instagram"></i>
+          Follow kami
+        </a>
+
+        <button class="btn-animate btn-hover" type="button">
+          <i class="fa-brands fa-whatsapp"></i>
+          Reservasi sekarang
+        </button>
+      </div>
     </div>
 
-    <div class="footer-logo-wrapper relative w-full md:w-max h-max mt-auto ml-auto">
-      <img src="./images/footer-logo-bg.svg" alt="" class="footer-logo-bg w-full md:w-auto">
-      <div class="footer-logo absolute flex flex-col items-end justify-end bottom-4 right-7 md:bottom-7 md:right-14">
-        <img src="./images/logo-footer.svg" alt="Mansyurina" class="mb-2 w-[135px] md:w-auto">
-        <small class="text-gray-400 text-xs md:text-sm">Copyright &copy; <span class="year"></span> - <span class="hostname"></span></small>
+    <div class="footer-bottom flex absolute bottom-0 left-0 right-0 h-max">
+      <div class="footer-logo-wrapper relative w-full md:w-max h-max mt-auto ml-auto transition-all duration-700">
+        <img src="./images/footer-logo-bg.svg" alt="" class="footer-logo-bg w-full md:w-auto">
+        <div class="footer-logo absolute flex flex-col items-end justify-end bottom-4 right-7 md:bottom-7 md:right-14">
+          <img src="./images/logo-footer.svg" alt="Mansyurina" class="mb-2 w-[135px] md:w-auto">
+          <small class="text-gray-400 text-xs md:text-sm">Copyright &copy; <span class="year"></span> - <span
+                  class="hostname"></span></small>
+        </div>
       </div>
     </div>
   </footer>
@@ -360,6 +385,7 @@
     const footer = document.querySelector('footer');
     const year = document.querySelector('span.year');
     const hostname = document.querySelector('span.hostname');
+    const footerLogo = document.querySelector('.footer-logo-wrapper');
     console.log(h1);
 
     const headerObserver = new IntersectionObserver((obj) => {
@@ -377,8 +403,10 @@
     const footerObserver = new IntersectionObserver((obj) => {
       if (!obj[0].isIntersecting) {
         nav.classList.remove('lg:-translate-y-72');
+        footerLogo.classList.add('translate-y-[200px]');
       } else {
         nav.classList.add('lg:-translate-y-72');
+        footerLogo.classList.remove('translate-y-[200px]');
       }
     }, { threshold: 0.9 });
 
