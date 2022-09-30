@@ -5,6 +5,14 @@ h1 {
   background-image: url('../../images/top-title-base.svg');
 }
 
+nav::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition-all duration-700;
+  background: linear-gradient(256.38deg, rgba(95, 194, 171, 0.8) -0.91%, rgba(179, 217, 104, 0.8) 97.53%);
+  backdrop-filter: blur(0);
+  z-index: -1;
+}
+
 header {
   background-image: linear-gradient(257.62deg, #5FC2AB 0%, #B3D968 100.27%);
 }
@@ -52,6 +60,10 @@ section.testimonial {
   background-image: linear-gradient(256.38deg, #5FC2AB -0.91%, #B3D968 97.53%);
 }
 
+footer {
+  background: linear-gradient(255.77deg, #5FC2AB 0%, #B3D968 97.55%);
+}
+
 @tailwind components;
 
 /* CUSTOM */
@@ -67,7 +79,38 @@ section.testimonial {
   @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
 }
 
+.slider .slide .title {
+  background-image: url('../../images/bg-article-thumb-title.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  @apply opacity-100 lg:opacity-0
+}
+
+.slider .slide:hover .title {
+  opacity: 1;
+}
+
+.logo {
+  @apply w-[322px] h-[98px] lg:w-[825px] lg:h-[274px] text-2xl block absolute top-0 left-0;
+  @apply bg-no-repeat bg-contain pt-5 pl-10 lg:pt-[54px] lg:pl-[100px];
+  @apply transition-all duration-700 origin-top-left;
+}
+
+.logo.shrink {
+  @apply lg:scale-[.6];
+}
+
+.footer-logo-bg {
+  @apply flex flex-col items-end justify-end w-full md:w-[654px] md:h-[200px];
+}
+
 @tailwind utilities;
+
+nav.opaque::before {
+  @apply opacity-100;
+  backdrop-filter: blur(5px);
+}
 
 .btn-hover {
   @apply hover:-translate-y-2 hover:shadow-lg transition-all duration-300;
