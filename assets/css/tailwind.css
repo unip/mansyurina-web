@@ -124,6 +124,34 @@ footer {
   @apply flex flex-col items-end justify-end w-full md:w-[654px] md:h-[200px];
 }
 
+.app-wrapper.menu-open {
+  @apply scale-75 rounded-3xl overflow-hidden blur-xl;
+}
+
+.burger {
+  @apply w-8 h-8; 
+  @apply flex items-center justify-center lg:hidden text-white ml-auto md:mr-6;
+}
+
+.mobile-menu {
+  background: linear-gradient(257.62deg, rgba(95, 194, 171, 0.8) 0%, rgba(179, 217, 104, 0.8) 100.27%);
+  @apply fixed flex justify-end lg:hidden top-0 right-0 bottom-0 left-0 pt-40 z-[90];
+  @apply opacity-0 invisible;
+}
+
+.mobile-menu .menu-items {
+  @apply flex flex-col items-end pr-12 gap-5;
+  @apply opacity-0 translate-x-20;
+}
+
+.mobile-menu.menu-open {
+  @apply opacity-100 visible;
+}
+
+.mobile-menu.menu-open .menu-items {
+  @apply opacity-100 translate-x-0;
+}
+
 @tailwind utilities;
 
 nav.opaque::before {
