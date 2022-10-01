@@ -1,3 +1,196 @@
 @tailwind base;
+
+/* CUSTOM */
+h1 {
+  background-image: url('../../images/top-title-base.svg');
+}
+
+nav::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition-all duration-700;
+  background: linear-gradient(256.38deg, rgba(95, 194, 171, 0.8) -0.91%, rgba(179, 217, 104, 0.8) 97.53%);
+  backdrop-filter: blur(0);
+  z-index: -1;
+}
+
+header {
+  background-image: linear-gradient(257.62deg, #5FC2AB 0%, #B3D968 100.27%);
+}
+
+header::after {
+  content: '';
+  height: 273px;
+  background-image: url('../../images/separator-header.png');
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+section.kelas-massage::before {
+  content: '';
+  height: 73px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../images/separator-kelas-top.png');
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+section.kelas-massage::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../images/separator-kelas-bottom.png');
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+section.testimonial {
+  background-image: linear-gradient(256.38deg, #5FC2AB -0.91%, #B3D968 97.53%);
+}
+
+footer {
+  background: linear-gradient(255.77deg, #5FC2AB 0%, #B3D968 97.55%);
+}
+
 @tailwind components;
+
+/* CUSTOM */
+.btn-white {
+  @apply rounded-[36px] bg-white px-[35px] py-[20px] text-dark-red shadow-md text-2xl;
+}
+.btn-peach {
+  @apply rounded-[36px] bg-peach px-[35px] py-[20px] text-dark-red shadow-md text-2xl;
+}
+
+.btn-green-blue {
+  background: linear-gradient(257.62deg, #5FC2AB 0%, #B3D968 100.27%);
+  @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
+}
+
+.btn-animate {
+  background: linear-gradient(-45deg, #b3d968, #f6c346, #b3d968);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  @apply rounded-[36px] px-[35px] py-[20px] text-white shadow-md text-2xl;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.slider .slide .title {
+  background-image: url('../../images/bg-article-thumb-title.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  @apply opacity-100 lg:opacity-0
+}
+
+.slider .slide:hover .title {
+  opacity: 1;
+}
+
+.logo {
+  @apply w-[322px] h-[98px] lg:w-[825px] lg:h-[274px] text-2xl block absolute top-0 left-0;
+  @apply bg-no-repeat bg-contain pt-5 pl-10 lg:pt-[54px] lg:pl-[100px];
+  @apply transition-all duration-700 origin-top-left;
+}
+
+.logo.shrink {
+  @apply lg:scale-[.6];
+}
+
+.footer-logo-bg {
+  @apply flex flex-col items-end justify-end w-full md:w-[654px] md:h-[200px];
+}
+
+.app-wrapper.menu-open {
+  @apply scale-75 rounded-3xl overflow-hidden blur-xl;
+}
+
+.burger {
+  @apply w-8 h-8; 
+  @apply flex items-center justify-center lg:hidden text-white ml-auto md:mr-6;
+}
+
+.mobile-menu {
+  background: linear-gradient(257.62deg, rgba(95, 194, 171, 0.8) 0%, rgba(179, 217, 104, 0.8) 100.27%);
+  @apply fixed flex justify-end lg:hidden top-0 right-0 bottom-0 left-0 pt-40 z-[90];
+  @apply opacity-0 invisible;
+}
+
+.mobile-menu .menu-items {
+  @apply flex flex-col items-end pr-12 gap-5;
+  @apply opacity-0 translate-x-20;
+}
+
+.mobile-menu.menu-open {
+  @apply opacity-100 visible;
+}
+
+.mobile-menu.menu-open .menu-items {
+  @apply opacity-100 translate-x-0;
+}
+
 @tailwind utilities;
+
+nav.opaque::before {
+  @apply opacity-100;
+  backdrop-filter: blur(5px);
+}
+
+.btn-hover {
+  @apply hover:-translate-y-2 hover:shadow-lg transition-all duration-300;
+}
+
+.baby-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+.circle1-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 500ms;
+  transform-origin: 50% 50%;
+}
+.circle2-animation {
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1500ms;
+  transform-origin: 50% 50%;
+}
+
+@keyframes babyAnim {
+  0% {
+    transform: translate(0)
+  }
+
+  50% {
+    transform: translateY(-50px)
+  }
+
+  to {
+    transform: translate(0)
+  }
+}
