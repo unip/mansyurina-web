@@ -353,13 +353,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -631,8 +624,7 @@ footer {
 .btn-animate {
   background: linear-gradient(-45deg, #b3d968, #f6c346, #b3d968);
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   border-radius: 36px;
   padding-left: 35px;
   padding-right: 35px;
@@ -645,20 +637,6 @@ footer {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -997,7 +975,6 @@ footer {
 }
 
 .h-max {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -1039,7 +1016,6 @@ footer {
 }
 
 .w-max {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -1076,17 +1052,8 @@ footer {
   max-width: 42rem;
 }
 
-.shrink {
-  flex-shrink: 1;
-}
-
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[200px\] {
-  --tw-translate-y: 200px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1099,7 +1066,6 @@ footer {
 }
 
 .cursor-grab {
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
@@ -1157,10 +1123,6 @@ footer {
 
 .overflow-auto {
   overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .overflow-visible {
@@ -1399,45 +1361,23 @@ nav.opaque::before {
 }
 
 .baby-animation {
-  -webkit-animation: babyAnim 4s ease-in-out;
-          animation: babyAnim 4s ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
   transform-origin: 50% 50%;
 }
 
 .circle1-animation {
-  -webkit-animation: babyAnim 4s ease-in-out;
-          animation: babyAnim 4s ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 500ms;
   transform-origin: 50% 50%;
 }
 
 .circle2-animation {
-  -webkit-animation: babyAnim 4s ease-in-out;
-          animation: babyAnim 4s ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  animation: babyAnim 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1500ms;
   transform-origin: 50% 50%;
-}
-
-@-webkit-keyframes babyAnim {
-  0% {
-    transform: translate(0)
-  }
-
-  50% {
-    transform: translateY(-50px)
-  }
-
-  to {
-    transform: translate(0)
-  }
 }
 
 @keyframes babyAnim {
@@ -1531,7 +1471,6 @@ nav.opaque::before {
   }
 
   .md\:w-max {
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -1630,10 +1569,6 @@ nav.opaque::before {
     height: 318px;
   }
 
-  .lg\:h-\[80px\] {
-    height: 80px;
-  }
-
   .lg\:min-h-\[758px\] {
     min-height: 758px;
   }
@@ -1652,11 +1587,6 @@ nav.opaque::before {
 
   .lg\:max-w-\[477px\] {
     max-width: 477px;
-  }
-
-  .lg\:-translate-y-72 {
-    --tw-translate-y: -18rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:flex-row {

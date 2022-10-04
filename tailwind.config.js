@@ -1,5 +1,13 @@
 module.exports = {
-  content: ["./index.html"],
+  content: [
+    "./index.html",
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./static/**/*.{js,css}",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+  ],
   theme: {
     fontFamily: {
       sans: ["Nunito", "sans-serif"],
