@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/unip/mansyurina-web.git",
-  "author": "Hanif <abdurrahman.alhanif@gmail.com>",
+  "author": "unip.studio <abdurrahman.alhanif@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -1,4 +1,4 @@
-export default {
+export default defineNuxtConfig ({
   components: true,
   buildModules: [
     '@nuxt/postcss8',
@@ -51,4 +51,4 @@ export default {
   css: [
     '@/assets/css/tailwind.css',
   ],
-}
+})
